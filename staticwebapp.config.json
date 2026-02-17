@@ -1,0 +1,22 @@
+{
+    "navigationFallback": {
+        "rewrite": "/index.html",
+        "exclude": [
+            "/images/*.{png,jpg,gif}",
+            "/css/*"
+        ]
+    },
+    "routes": [],
+    "responseOverrides": {
+        "401": {
+            "redirect": "/.auth/login/github",
+            "statusCode": 302
+        }
+    },
+    "globalHeaders": {
+        "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+    },
+    "mimeTypes": {
+        ".json": "text/json"
+    }
+}
